@@ -4,6 +4,7 @@ import { VersionedNodeType } from 'n8n-workflow';
 import { DiscordV1 } from './v1/DiscordV1.node';
 import { DiscordV2 } from './v2/DiscordV2.node';
 
+// Explicitly export as default to ensure the class loader can find it
 export class Discord extends VersionedNodeType {
 	constructor() {
 		const baseDescription: INodeTypeBaseDescription = {
@@ -23,3 +24,6 @@ export class Discord extends VersionedNodeType {
 		super(nodeVersions, baseDescription);
 	}
 }
+
+// Default export to ensure compatibility with class loader
+export default Discord;
