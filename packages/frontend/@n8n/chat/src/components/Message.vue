@@ -8,7 +8,7 @@ import typescript from 'highlight.js/lib/languages/typescript';
 import xml from 'highlight.js/lib/languages/xml';
 import type MarkdownIt from 'markdown-it';
 import markdownLink from 'markdown-it-link-attributes';
-import { computed, ref, toRefs, onMounted } from 'vue';
+import { computed, ref, toRefs, onMounted, useSlots } from 'vue';
 import VueMarkdown from 'vue-markdown-render';
 
 import { useOptions } from '@n8n/chat/composables';
@@ -19,6 +19,8 @@ import ChatFile from './ChatFile.vue';
 const props = defineProps<{
 	message: ChatMessage;
 }>();
+
+const slots = useSlots();
 
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('typescript', typescript);
@@ -105,7 +107,7 @@ onMounted(async () => {
 
 <template>
 	<div ref="messageContainer" class="chat-message" :class="classes">
-		<div v-if="$slots.beforeMessage" class="chat-message-actions">
+		<div v-if="slots.beforeMessage" class="chat-message-actions">
 			<slot name="beforeMessage" v-bind="{ message }" />
 		</div>
 		<slot>
