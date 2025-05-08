@@ -437,3 +437,7 @@ export class RetrieverWorkflow implements INodeType {
 		};
 	}
 }
+
+
+// Add default export to ensure the class can be found by the class loader
+export default RetrieverWorkflow;

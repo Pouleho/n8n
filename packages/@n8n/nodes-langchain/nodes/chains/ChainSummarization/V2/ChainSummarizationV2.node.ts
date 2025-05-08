@@ -433,3 +433,7 @@ export class ChainSummarizationV2 implements INodeType {
 		return [returnData];
 	}
 }
+
+
+// Add default export to ensure the class can be found by the class loader
+export default ChainSummarizationV2;

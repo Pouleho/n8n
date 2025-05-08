@@ -126,3 +126,7 @@ export class VectorStoreSupabaseInsert implements INodeType {
 		return [serializedDocuments];
 	}
 }
+
+
+// Add default export to ensure the class can be found by the class loader
+export default VectorStoreSupabaseInsert;

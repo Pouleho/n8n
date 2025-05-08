@@ -473,3 +473,7 @@ export class Agent implements INodeType {
 		throw new NodeOperationError(this.getNode(), `The agent type "${agentType}" is not supported`);
 	}
 }
+
+
+// Add default export to ensure the class can be found by the class loader
+export default Agent;
