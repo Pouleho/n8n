@@ -47,7 +47,3 @@ export class ToolWorkflowV2 implements INodeType {
 		return { response: tool };
 	}
 }
-
-
-// Add default export to ensure the class can be found by the class loader
-export default ToolWorkflowV2;

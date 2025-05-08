@@ -260,7 +260,3 @@ export class McpClientTool implements INodeType {
 		return { response: toolkit, closeFunction: async () => await client.result.close() };
 	}
 }
-
-
-// Add default export to ensure the class can be found by the class loader
-export default McpClientTool;

@@ -153,7 +153,3 @@ export class LmOpenHuggingFaceInference implements INodeType {
 		};
 	}
 }
-
-
-// Add default export to ensure the class can be found by the class loader
-export default LmOpenHuggingFaceInference;
